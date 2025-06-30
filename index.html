@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rachmandika's Portfolio</title>
+    <meta
+      name="description"
+      content="This is a portfolio website of Rachmandika"
+    />
+    <meta name="keywords" content="portfolio, Rachmandika, web development" />
+    <meta name="author" content="Portfolio of Rachmandika" />
+    <link rel="icon" href="image/Potrait_White.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <nav class="navbar">
+        <ul>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="Home">
+        <h1>Hello, <br> My name is Rachmandika</h1>
+        <img
+          src="image/portraitpage.png"
+          alt="Rachmandika's Portrait"
+          class="portrait-home-page"
+        />
+        <img
+          src="image/backgroundimage.png"
+          alt="Background"
+          class="background-home-page"
+        />
+        <p>
+          In this very simple web pages I'm gonna introduce myself in a very
+          brief manner so you can have a glimpse of idea of who am I, what's my
+          experience, what have I created and how to reach me out if you
+          interested to work something with me.
+        </p>
+      </section>
+
+      <section id="About">
+        <h2>About Me</h2>
+        <p>Write a brief introduction about yourself here.</p>
+        <img
+          src="image/Potrait_White.jpg"
+          alt="About Me"
+          class="portrait-about-page"
+        />
+      </section>
+
+      <section id="Projects">
+        <h2>Projects</h2>
+        <p>List your projects or link to them here.</p>
+      </section>
+
+      <section id="Contact">
+        <h2>Contact Me</h2>
+        <form action="#" method="post" class="contact-form">
+          <p>Please fill out the form below to get in touch.</p>
+          <!--need to add action script later-->
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required /><br />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea><br />
+          <button type="submit">Send</button>
+        </form>
+      </section>
+
+      <footer class="footer">
+        <p>&copy; 2025 Rachmandika. All rights reserved.</p>
+      </footer>
+    </main>
+  </body>
+</html>
