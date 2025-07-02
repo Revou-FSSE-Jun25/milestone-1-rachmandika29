@@ -2,6 +2,7 @@
 and make smooth scrolling*/
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 body {
   margin: 0;
@@ -54,6 +55,8 @@ body {
 
 /*  Home section */
 #Home {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -117,4 +120,63 @@ body {
 /* Hide the background image element if you use CSS background */
 .background-home-page {
   display: none;
+}
+
+/* About section */
+#About {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+/* About2 section */
+#About2 {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+/* Project section */
+#Project {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  text-align: center;
+  padding: 3rem 1rem;
+} 
+
+/* Contact section */
+#Contact {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  text-align: center;
+  padding: 3rem 1rem;
 }
