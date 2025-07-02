@@ -12,6 +12,11 @@ This is a personal portfolio website for Rachmandika, built using HTML. The site
 - **Responsive Meta Tags:** Ensures the site displays well on all devices.
 - **Favicon:** Custom icon for browser tabs.
 
+## Styles
+### Fonts
+- **Bebas Neue** - Used in Navigation Bar and Headers
+- **Lato** - Used in Paragraph
+
 ## How to Access/Navigate The website
 
 1. Open the website in your web browser to view the portfolio under the domain name *dikadikadika.com*
