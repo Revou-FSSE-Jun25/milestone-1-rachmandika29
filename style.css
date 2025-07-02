@@ -15,7 +15,7 @@ body {
   background: #222(34, 34, 34, 0.25);
   padding: 0.5rem 0;
   text-align: right;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
