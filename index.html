@@ -4,25 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rachmandika's Portfolio</title>
-    <!--Meta Tags for SEO-->
     <meta
       name="description"
       content="This is a portfolio website of Rachmandika"
     />
     <meta name="keywords" content="portfolio, Rachmandika, web development" />
     <meta name="author" content="Portfolio of Rachmandika" />
-    <!--icon image for favicon-->
     <link rel="icon" href="image/Potrait_White.jpg" type="image/x-icon" />
-    <!--Link to external CSS file-->
     <link rel="stylesheet" href="style.css" />
-    <!-- Bebas Neue for Headers and Nav-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
-    <!--Lato for Paragraph-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,29 +29,25 @@
     <header id="header">
       <nav class="navbar">
         <ul>
-          <li><a href="#Home">Home</a></li>
-          <li><a href="#About">About</a></li>
-          <li><a href="#Projects">Projects</a></li>
-          <li><a href="#Contact">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section id="Home">
-        <h1>
+      <section id="home" aria-labelledby="main-title">
+        <h1 id="main-title">
           Hello, My name is
-          <div class="Rachmandika">Rachmandika</div>
+          <span class="Rachmandika">Rachmandika</span>
         </h1>
         <img
           src="image/portraitpage.png"
           alt="Rachmandika's Portrait"
           class="portrait-home-page"
-        />
-        <img
-          src="image/backgroundimage.png"
-          alt="Background"
-          class="background-home-page"
         />
         <p>
           In this very simple web pages I'm gonna introduce myself in a very
@@ -66,17 +57,16 @@
         </p>
       </section>
 
-      <section id="About">
-        <h2>Who am I?</h2>
+      <section id="about" aria-labelledby="about-title">
+        <h2 id="about-title">Who am I?</h2>
         <p>
           I'm a simple guy who born at the end of the 20th century, which I
           would consider myself lucky to born at this period considering that I
-          can grew at the same time with how internet grows. growing up I'm
+          can grew at the same time with how internet grows. Growing up I'm
           always close with internet and pop culture, which really shapes my
           interest and my view around the pop culture and the internet culture
-          it self. <br />
-          <br />
-          In short, I can describe myself as a "cultured geek". Does it sounds
+          itself.
+          In short, I can describe myself as a "cultured geek". Does it sound
           cocky? Me too, you're not alone.
         </p>
         <img
@@ -85,14 +75,15 @@
           class="portrait-about-page"
         />
       </section>
-      <section id="About2">
-        <h2>My Experiences.. So far.</h2>
+
+      <section id="experience" aria-labelledby="experience-title">
+        <h2 id="experience-title">My Experiences... So far.</h2>
         <p>
           I'll start with my education, which is quite bland actually as I took
-          Communication Science as my major. Which if you currently do the same,
+          <span class="highlight">Communication Science</span> as my major. Which if you currently do the same,
           trust me, at the end of your study you will raise a question about
           "why am I study a thing that we can learn it on a Public Relations
-          Short course?". But don't listen to me, Trust your self.
+          Short course?". But don't listen to me, Trust yourself.
         </p>
         <p>
           But thankfully life is not determined by what have you study, but it's
@@ -101,54 +92,50 @@
         </p>
         <ul>
           <li>
-            I started my career from a small trucking service startup in Jakarta
-            as the Customer Service Specialist who manage the client's booking
+            I started my career from a <span class="highlight">small trucking service startup</span> in Jakarta
+            as the <span class="highlight">Customer Service Specialist</span> who managed the client's booking
             for the trucking and also to manage the "supply and demand" of the
             service based on our truck availability. I stayed here for around 2
             years.
           </li>
           <li>
-            My Previous experiences might not yet touch anything about internet
+            My previous experiences might not yet touch anything about internet
             and technology, but those previous 2 years helped me a lot to learn
             much about the communication technique and strategy, in which it
             lands me to my next path of the career which I'm still currently on
-            right now. From the last 2 years I join the Global Web Hosting
-            Company who has all around the worlds users, I joined as the
-            Technical Specialist who my daily task mainly to help and
+            right now. From the last 2 years I join the <span class="highlight">Global Web Hosting Company</span>
+            who has all around the worlds users, I joined as the
+            <span class="highlight"> Customer Technical Specialist</span> who my daily task mainly to help and
             troubleshoots client's daily issue with their hosting; from Domain
             management, Website Deployment and migration issue, up to talk about
             the billings and renewals plan of their hosting.
           </li>
         </ul>
+        <img src="image/background_about2.png" alt="Rachmandika Portrait 2">
       </section>
 
-      <section id="Projects">
-        <h2>Projects</h2>
-        
+      <section id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">Projects</h2>
         <article>
           <img src="image/placeholder-image-square.jpg" alt="Project 1 Screenshot" />
-          <h3>Project 1</h3>
-          <p>Project 1 Description</p>
+          <h3>Still</h3>
+          <p>Whatever it is</p>
         </article>
-        
         <article>
           <img src="image/placeholder-image-square.jpg" alt="Project 2 Screenshot" />
-          <h3>Project 2</h3>
-          <p>Project 2 Description</p>
+          <h3>On</h3>
+          <p>Maybe something good</p>
         </article>
-        
         <article>
           <img src="image/placeholder-image-square.jpg" alt="Project 3 Screenshot" />
-          <h3>Project 3</h3>
-          <p>Project 3 Description</p>
+          <h3>progress</h3>
+          <p>I hope so</p>
         </article>
       </section>
 
-      <section id="Contact">
-        <h2>Contact Me</h2>
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact Me</h2>
         <form action="#" method="post" class="contact-form">
-          <p>Call me? Or just send me message</p>
-          <!--need to add action script later-->
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required /><br />
 
@@ -159,11 +146,12 @@
           <textarea id="message" name="message" required></textarea><br />
           <button type="submit">Send</button>
         </form>
+        <img src="image/background_about1.png" alt="Rachmandika Portrait 3">
       </section>
-
-      <footer class="footer">
-        <p>&copy; 2025 Rachmandika. All rights reserved.</p>
-      </footer>
     </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 Rachmandika. All rights reserved.</p>
+    </footer>
   </body>
 </html>

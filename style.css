@@ -16,7 +16,7 @@ body {
   background: #222(34, 34, 34, 0.25);
   padding: 0.5rem 0;
   text-align: right;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -55,7 +55,7 @@ body {
 }
 
 /*  Home section */
-#Home {
+#home {
   scroll-snap-align: start;
   scroll-snap-stop: always;
   position: relative;
@@ -67,39 +67,37 @@ body {
   color: #fff;
   text-align: center;
   padding: 3rem 1rem;
-  overflow: hidden; /* Ensure blur stays inside */
+  overflow: hidden;
 }
 
-#Home::before {
+#home::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    /* slightly lighter dark overlay */ url("image/backgroundimage.png") center
-      center/cover no-repeat;
+    url("image/backgroundimage.png") center center/cover no-repeat;
   filter: blur(6px);
   z-index: 0;
-  transform: scale(1.08); /* Zoom in the background image */
+  transform: scale(1.08);
 }
 
-#Home::after {
+#home::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   height: 80px;
-  background: linear-gradient(to bottom, transparent, #222 90%);
   z-index: 2;
   pointer-events: none;
 }
 
-#Home > * {
+#home > * {
   position: relative;
   z-index: 1;
 }
 
-#Home h1 {
+#home h1 {
   font-size: 2.5rem;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -123,7 +121,7 @@ body {
   display: none;
 }
 
-#Home p {
+#home p {
   font-size: 1.1rem;
   font-family: lato, sans-serif;
   font-weight: 400;
@@ -135,13 +133,9 @@ body {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 }
 
-/* Hide the background image element if you use CSS background */
-.background-home-page {
-  display: none;
-}
 
 /* About section */
-#About {
+#about {
   scroll-snap-align: start;
   scroll-snap-stop: always;
   position: relative;
@@ -153,11 +147,12 @@ body {
   justify-content: center;
   color: #ffffff;
   text-align: left;
-  padding: 3rem 1rem;
+  padding: 0rem 1rem;
   gap: 2.5rem;
+  background-color: #000;
 }
 
-#About h2 {
+#about h2 {
   font-size: 4rem;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -168,7 +163,7 @@ body {
   color: #ff9800;
 }
 
-#About p {
+#about p {
   font-size: 1.1rem;
   font-family: lato, sans-serif;
   font-weight: 400;
@@ -180,7 +175,7 @@ body {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 }
 
-#About img.portrait-about-page {
+#about img.portrait-about-page {
   width: auto;
   height: auto;
   max-width: 280px;
@@ -191,36 +186,82 @@ body {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
 }
 
-#About::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("image/background_about1.png") center center/cover no-repeat;
-  filter: blur(6px);
-  z-index: 0;
-  transform: scale(1.08); /* Zoom in the background image */
-}
-
-#About::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 80px;
-  background: linear-gradient(to top, transparent, #222 90%);
-  z-index: 2;
-  pointer-events: none;
-}
-
-#About > * {
+/* Experience section */
+#experience {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   position: relative;
-  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  color: #fff;
+  text-align: left;
+  padding: 0rem 1rem;
+  background-color: #000;
 }
 
-/* About2 section */
-#About2 {
+#experience h2 {
+  font-size: 2.5rem;
+  color: #ff9800;
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 1.2rem;
+  padding-right: 34vw
+}
+
+#experience p,
+#experience ul {
+  font-size: 1rem;
+  font-family: lato, sans-serif;
+  font-weight: 400;
+  color: #f3f3f3;
+  max-width: 800px;
+  text-align: justify;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  padding-right: 20vw;
+}
+
+#experience .highlight {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+#experience img {
+  position: absolute;
+  top: 45%;
+  right: 2rem;
+  transform: translateY(-50%);
+  width: 32vw;
+  max-width: 300px;
+  height: auto;
+  max-height: 70vh;
+  object-fit: cover;
+  margin: 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  z-index: 2;
+}
+
+/* Responsive: stack image below text on small screens */
+@media (max-width: 900px) {
+  #experience img {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    max-height: 300px;
+    transform: none;
+    margin-top: 2rem;
+    right: auto;
+  }
+  #experience p,
+  #experience ul,
+  #experience h2 {
+    padding-right: 0;
+  }
+}
+
+/* Projects section */
+#projects {
   scroll-snap-align: start;
   scroll-snap-stop: always;
   position: relative;
@@ -228,78 +269,217 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  color: #000000;
+  color: #fff;
   text-align: center;
   padding: 3rem 1rem;
+  background-color: #000; /* Match other sections */
 }
 
-/* Project section */
-#Project {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 2rem;
-  color: #000000;
+#projects > h2 {
   text-align: center;
-  padding: 3rem 1rem;
+  font-size: 2.5rem;
+  font-family: "Bebas Neue", sans-serif;
+  color: #ff9800;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
 }
 
-#Projects > h2 {
-  grid-column: 1 / -1; /* Make the heading span all columns */
-  text-align: center;
-}
-
-#Projects article {
-  background: #fff;
+#projects article {
+  background: #181818; /* Dark card for contrast */
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  padding: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+  max-width: 420px;
+  width: 100%;
 }
 
-#Projects article img {
+#projects article img {
   max-width: 100%;
   max-height: 180px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
 
-#Projects article h3 {
+#projects article h3 {
   margin: 0.5rem 0 0.25rem 0;
   font-size: 1.2rem;
+  color: #ff9800;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.5px;
 }
 
-#Projects article p {
+#projects article p {
   font-size: 1rem;
   text-align: center;
+  color: #f3f3f3;
+  font-family: lato, sans-serif;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 }
 
 /* Responsive: stack on small screens */
 @media (max-width: 900px) {
-  #Projects {
-    grid-template-columns: 1fr;
+  #projects {
+    flex-direction: column;
+  }
+  #projects article {
+    max-width: 100%;
   }
 }
 
 /* Contact section */
-#Contact {
+#contact {
   scroll-snap-align: start;
   scroll-snap-stop: always;
   position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  color: #000000;
+  color: #fff; 
+  text-align: left;
+  padding: 0rem 1rem;
+  background-color: #000; 
+}
+
+#contact > h2 {
+  font-size: 2.5rem;
+  font-family: "Bebas Neue", sans-serif;
+  color: #ff9800;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+#contact form,
+#contact label,
+#contact input,
+#contact textarea {
+  font-family: lato, sans-serif;
+  color: #f3f3f3;
+  margin-bottom: 1rem;
+}
+
+#contact p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  text-align: left;
+}
+
+#contact input,
+#contact textarea {
+  background: #181818;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: none;
+  border-color: #ff9800;
+}
+
+#contact button,
+#contact input[type="submit"] {
+  background: #ff9800;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 2rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+
+#contact button:hover,
+#contact input[type="submit"]:hover {
+  background: #ffa733;
+}
+
+#contact img {
+  position: absolute;
+  top: 51%;
+  right: 17rem;
+  transform: translateY(-50%) scale(1.25);
+  width: 32vw;
+  max-width: 300px;
+  height: auto;
+  max-height: 70vh;
+  object-fit: cover;
+  margin: 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  z-index: 2;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 900px) {
+  #contact {
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0.5rem;
+  }
+  #contact > h2,
+  #contact p {
+    text-align: center;
+  }
+  #contact input,
+  #contact textarea {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  #contact img {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    max-height: 300px;
+    transform: none;
+    margin-top: 2rem;
+    right: auto;
+  }
+}
+
+/* Footer styles */
+footer {
+  background: #000; /* Match other sections */
+  color: #fff;
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem 1rem 1rem;
+  position: relative;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  border-top: 2px solid #181818;
+}
+
+footer span,
+footer a {
+  color: #ff9800;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffa733;
+  text-decoration: underline;
 }
