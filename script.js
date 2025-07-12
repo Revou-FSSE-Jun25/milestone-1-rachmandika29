@@ -19,6 +19,7 @@ function showNotification(message, type) {
 document.addEventListener('DOMContentLoaded', function() {
     emailjs.init('OI8UDNNBnIYXpLeXV');
 
+
     // Handle form submission
     const contactForm = document.querySelector('.contact-form');
     
@@ -65,17 +66,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-    // Function to show notification
-    function showNotification(message, type) {
-        const notification = document.getElementById('notification');
-        notification.textContent = message;
-        notification.className = 'notification ' + type;
-        
-        // Show the notification
-        notification.style.display = 'block';
-        
-        // Hide the notification after 3 seconds
-        setTimeout(() => {
-            notification.style.display = 'none';
-        }, 3000);
-    }
+// Hamburger menu functionality
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const navLinksItems = document.querySelectorAll('.nav-links a');
+
+    // Toggle menu on hamburger click
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking nav links
+    navLinksItems.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
