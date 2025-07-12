@@ -4,7 +4,11 @@ A modern, responsive portfolio website showcasing Rachmandika's professional jou
 
 ## Features
 
-- **Fixed Navigation Bar:** Sleek, responsive navigation with smooth scrolling to sections
+- **Responsive Navigation:**
+  - Desktop: Fixed navigation bar with smooth scrolling
+  - Mobile: Hamburger menu with slide-out navigation panel
+  - Animated hamburger icon transformation
+  - Touch-friendly mobile interaction
 - **Home Section:** Dynamic welcome message with blur effect background
 - **About Section:** Personal introduction with styled image integration
 - **Experience Section:** Detailed professional journey with highlighted keywords
