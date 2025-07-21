@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth bg-[#000000] text-[#ffffff]">
-
   <head>
+    <!--Meta Tags-->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rachmandika's Portfolio</title>
@@ -11,7 +11,9 @@
     />
     <meta name="keywords" content="portfolio, Rachmandika, web development" />
     <meta name="author" content="Portfolio of Rachmandika" />
+    <!--favicon-->
     <link rel="icon" href="image/x-icon.png" type="image/x-icon" />
+    <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,171 +26,358 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- EmailJS -->
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
+    <!--JavaScript-->
     <script src="script.js" defer></script>
+    <!--TailwindCSS-->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-      /* Hamburger Animation */
-      .hamburger.active span:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-      }
-      
-      .hamburger.active span:nth-child(2) {
-        opacity: 0;
-      }
-      
-      .hamburger.active span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-      }
-    </style>
   </head>
-
   <body>
-    <header id="header" class="px-6 py-4">
-      <nav class="navbar container mx-auto max-w-7xl">
-        <div class="hamburger md:hidden flex flex-col justify-between w-[30px] h-[21px] cursor-pointer z-[1001] ml-auto">
-          <span class="w-full h-[3px] bg-white rounded-[3px] transition-all duration-300"></span>
-          <span class="w-full h-[3px] bg-white rounded-[3px] transition-all duration-300"></span>
-          <span class="w-full h-[3px] bg-white rounded-[3px] transition-all duration-300"></span>
+    <header
+      id="header"
+      class="fixed top-0 left-0 right-0 px-4 xs:px-6 py-4 bg-black/80 backdrop-blur-sm z-50"
+    >
+      <nav
+        class="navbar container mx-auto max-w-7xl relative flex justify-end items-start py-4"
+      >
+        <div
+          class="hamburger md:hidden flex flex-col justify-center items-center gap-1.5 cursor-pointer z-[1001] p-2 absolute right-4 top-4"
+        >
+          <span
+            class="w-6 h-0.5 bg-white rounded-full transition-all duration-300"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-white rounded-full transition-all duration-300"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-white rounded-full transition-all duration-300"
+          ></span>
         </div>
-        <ul class="nav-links fixed md:relative top-0 -right-full md:right-0 h-screen md:h-auto w-[70%] md:w-auto bg-black/95 md:bg-transparent flex flex-col md:flex-row justify-center md:justify-end items-center transition-[right] duration-300 ease-in-out gap-8 z-[1000] md:px-4">
-          <li><a href="#home" class="text-white no-underline font-['Bebas_Neue'] text-4xl tracking-wider hover:text-[#ff9800] transition-colors duration-200">Home</a></li>
-          <li><a href="#about" class="text-white no-underline font-['Bebas_Neue'] text-4xl tracking-wider hover:text-[#ff9800] transition-colors duration-200">About</a></li>
-          <li><a href="#experience" class="text-white no-underline font-['Bebas_Neue'] text-4xl tracking-wider hover:text-[#ff9800] transition-colors duration-200">Experience</a></li>
-          <li><a href="#projects" class="text-white no-underline font-['Bebas_Neue'] text-4xl tracking-wider hover:text-[#ff9800] transition-colors duration-200">Projects</a></li>
-          <li><a href="#contact" class="text-white no-underline font-['Bebas_Neue'] text-4xl tracking-wider hover:text-[#ff9800] transition-colors duration-200">Contact</a></li>
+        <ul
+          class="nav-links fixed md:relative top-0 -right-full md:right-0 h-screen md:h-auto w-full xs:w-[70%] md:w-auto bg-black/95 md:bg-transparent flex flex-col md:flex-row
+          justify-center md:justify-end items-center transition-[right] duration-300 ease-in-out gap-6 xs:gap-8 z-[1000] md:px-4"
+        >
+          <li>
+            <a
+              href="#home"
+              class="text-white no-underline font-['Bebas_Neue'] text-3xl xs:text-4xl md:text-4xl tracking-wider hover:text-[#ff9800] transition-colors duration-200"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="text-white no-underline font-['Bebas_Neue'] text-3xl xs:text-4xl md:text-4xl tracking-wider hover:text-[#ff9800] transition-colors duration-200"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#experience"
+              class="text-white no-underline font-['Bebas_Neue'] text-3xl xs:text-4xl md:text-4xl tracking-wider hover:text-[#ff9800] transition-colors duration-200"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              class="text-white no-underline font-['Bebas_Neue'] text-3xl xs:text-4xl md:text-4xl tracking-wider hover:text-[#ff9800] transition-colors duration-200"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="text-white no-underline font-['Bebas_Neue'] text-3xl xs:text-4xl md:text-4xl tracking-wider hover:text-[#ff9800] transition-colors duration-200"
+              >Contact</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
 
-  <main>
-    <section id="home" aria-labelledby="main-title" class="relative min-h-screen flex flex-col justify-center items-center p-8 overflow-hidden">
-      <div class="absolute inset-0 z-0 bg-black">
-        <img src="image/backgroundimage.png" alt="Background" class="w-full h-full object-cover object-center blur-[2px] mix-blend-overlay" />
-      </div>
-      <div class="relative z-10 max-w-4xl mx-auto text-center">
-        <h1 id="main-title" class="mb-8">
-          Hello, My name is
-          <span class="Rachmandika">Rachmandika</span>
-        </h1>
-        <img src="image/portraitpage.png" alt="Rachmandika's Portrait" class="portrait-home-page mx-auto mb-8" />
-        <p class="text-lg max-w-2xl mx-auto">
-          In this very simple web pages I'm gonna introduce myself in a very
-          brief manner so you can have a glimpse of idea of who am I, what's my
-          experience, what have I created and how to reach me out if you
-          interested to work something with me.
+    <main>
+      <section
+        id="home"
+        aria-labelledby="main-title"
+        class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 mt-[50px] bg-[url(image/portraitpageinverse.png)]"
+      >
+        <div class="absolute inset-0"></div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center text-black">
+          <h1
+            id="main-title"
+            class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white"
+          >
+            Hello, My name is
+            <span class="Rachmandika block mt-2 text-[#ff9800]"
+              >Rachmandika</span
+            >
+          </h1>
+          <p class="text-lg sm:text-xl text-white leading-relaxed">
+            In this very simple web pages I'm gonna introduce myself in a very
+            brief manner so you can have a glimpse of idea of who am I, what's
+            my experience, what have I created and how to reach me out if you
+            interested to work something with me.
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="about"
+        aria-labelledby="about-title"
+        class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-8 px-4 sm:px-6 lg:px-8 py-16"
+      >
+        <div class="flex flex-col max-w-2xl text-center md:text-left">
+          <h2
+            id="about-title"
+            class="text-4xl sm:text-5xl font-bold mb-6 text-[#ff9800]"
+          >
+            Who am I?
+          </h2>
+          <p class="text-lg sm:text-xl leading-relaxed">
+            I'm a simple guy who born at the end of the 20th century, which I
+            would consider myself lucky to born at this period considering that
+            I can grew at the same time with how internet grows. Growing up I'm
+            always close with internet and pop culture, which really shapes my
+            interest and my view around the pop culture and the internet culture
+            itself. In short, I can describe myself as a "cultured geek". Does
+            it sound cocky? Me too, you're not alone.
+          </p>
+        </div>
+        <div>
+          <img
+            src="image/selfpotrait_bnw2.png"
+            alt="About Me"
+            class="rounded-[10%] w-full h-full object-cover shadow-lg"
+          />
+        </div>
+      </section>
+
+      <section
+        id="experience"
+        aria-labelledby="experience-title"
+        class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-8 px-4 sm:px-6 lg:px-8 py-16"
+      >
+        <div class="w-full md:max-w-4xl md:w-full flex-1">
+          <h2
+            id="experience-title"
+            class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-[#ff9800] text-center md:text-left"
+          >
+            My Experiences... So far.
+          </h2>
+          <div
+            class="space-y-4 md:space-y-6 text-base sm:text-lg md:text-xl leading-relaxed"
+          >
+            <p>
+              I'll start with my education, which is quite bland actually as I
+              took
+              <span class="highlight text-[#ff9800]"
+                >Communication Science</span
+              >
+              as my major. Which if you currently do the same, trust me, at the
+              end of your study you will raise a question about "why am I study
+              a thing that we can learn it on a Public Relations Short course?".
+              But don't listen to me, Trust yourself.
+            </p>
+            <p>
+              But thankfully life is not determined by what have you study, but
+              it's determined by your "taste". So here's the list of my
+              experiences and what have I done so far:
+            </p>
+            <ul class="space-y-6 list-none">
+              <li class="bg-black/20 backdrop-blur-sm p-6 rounded-lg">
+                I started my career from a
+                <span class="highlight text-[#ff9800]"
+                  >small trucking service startup</span
+                >
+                in Jakarta as the
+                <span class="highlight text-[#ff9800]"
+                  >Customer Service Specialist</span
+                >
+                who managed the client's booking for the trucking and also to
+                manage the "supply and demand" of the service based on our truck
+                availability. I stayed here for around 2 years.
+              </li>
+              <li class="bg-black/20 backdrop-blur-sm p-6 rounded-lg">
+                My previous experiences might not yet touch anything about
+                internet and technology, but those previous 2 years helped me a
+                lot to learn much about the communication technique and
+                strategy, in which it lands me to my next path of the career
+                which I'm still currently on right now. From the last 2 years I
+                join the
+                <span class="highlight text-[#ff9800]"
+                  >Global Web Hosting Company</span
+                >
+                who has all around the worlds users, I joined as the
+                <span class="highlight text-[#ff9800]"
+                  >Customer Technical Specialist</span
+                >
+                who my daily task mainly to help and troubleshoots client's
+                daily issue with their hosting; from Domain management, Website
+                Deployment and migration issue, up to talk about the billings
+                and renewals plan of their hosting.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <img
+            src="image/background_about2.png"
+            alt="Rachmandika Portrait 2"
+            class="rounded-[10%] w-full h-full object-cover shadow-lg"
+          />
+        </div>
+      </section>
+
+      <section
+        id="projects"
+        aria-labelledby="projects-title"
+        class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-8 px-4 sm:px-6 lg:px-8 py-16"
+      >
+        <div class="w-full md:max-w-4xl md:w-full flex-1">
+          <h2
+            id="projects-title"
+            class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-[#ff9800] text-center md:text-left"
+          >
+            My Projects
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article
+              class="bg-black/20 backdrop-blur-sm p-6 rounded-lg overflow-hidden"
+            >
+              <img
+                src="image/placeholder-image-square.jpg"
+                alt="Project 1 Screenshot"
+                class="w-full h-48 object-cover rounded-lg mb-4"
+              />
+              <h3 class="text-2xl font-bold text-[#ff9800] mb-2">Still</h3>
+              <p class="text-lg text-white">Whatever it is</p>
+            </article>
+            <article
+              class="bg-black/20 backdrop-blur-sm p-6 rounded-lg overflow-hidden"
+            >
+              <img
+                src="image/placeholder-image-square.jpg"
+                alt="Project 2 Screenshot"
+                class="w-full h-48 object-cover rounded-lg mb-4"
+              />
+              <h3 class="text-2xl font-bold text-[#ff9800] mb-2">On</h3>
+              <p class="text-lg text-white">Maybe something good</p>
+            </article>
+            <article
+              class="bg-black/20 backdrop-blur-sm p-6 rounded-lg overflow-hidden"
+            >
+              <img
+                src="image/placeholder-image-square.jpg"
+                alt="Project 3 Screenshot"
+                class="w-full h-48 object-cover rounded-lg mb-4"
+              />
+              <h3 class="text-2xl font-bold text-[#ff9800] mb-2">Progress</h3>
+              <p class="text-lg text-white">I hope so</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        aria-labelledby="contact-title"
+        class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-8 px-4 sm:px-6 lg:px-8 py-16"
+      >
+        <div class="w-full md:max-w-2xl flex-1">
+          <h2
+            id="contact-title"
+            class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-[#ff9800] text-center md:text-left"
+          >
+            Let's Connect!
+          </h2>
+          <div
+            id="notification"
+            class="notification mb-4 p-4 rounded-lg hidden"
+          ></div>
+          <form class="contact-form space-y-6">
+            <div class="flex flex-col gap-2">
+              <label for="name" class="text-lg font-semibold">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="p-3 rounded-lg bg-black/20 backdrop-blur-sm border border-[#ff9800] focus:outline-none focus:ring-2 focus:ring-[#ff9800] text-white"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="email" class="text-lg font-semibold">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="p-3 rounded-lg bg-black/20 backdrop-blur-sm border border-[#ff9800] focus:outline-none focus:ring-2 focus:ring-[#ff9800] text-white"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="message" class="text-lg font-semibold"
+                >Message:</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows="5"
+                class="p-3 rounded-lg bg-black/20 backdrop-blur-sm border border-[#ff9800] focus:outline-none focus:ring-2 focus:ring-[#ff9800] text-white resize-none"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full md:w-auto px-8 py-3 bg-[#ff9800] text-white font-bold rounded-lg hover:bg-[#ff9800]/80 transition-colors duration-200"
+            >
+              Send Message
+            </button>
+          </form>
+          <div
+            class="social-icons flex justify-center md:justify-start gap-6 mt-8 relative z-10">
+            <a
+              href="https://www.instagram.com/rachmandikaa/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:opacity-80 transition-opacity duration-200 bg-white/10 p-3 rounded-lg backdrop-blur-sm"
+            >
+              <img
+                src="image/instagram.png"
+                alt="Instagram Icon"
+                class="w-10 h-10 brightness-0 invert"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/rachmandikaadiguna/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:opacity-80 transition-opacity duration-200 bg-white/10 p-3 rounded-lg backdrop-blur-sm"
+            >
+              <img
+                src="image/linkedin.png"
+                alt="LinkedIn Icon"
+                class="w-10 h-10 brightness-0 invert"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="bg-black/80 backdrop-blur-sm py-8 px-4 sm:px-6 lg:px-8 mt-16"
+    >
+      <div class="container mx-auto max-w-7xl text-center">
+        <p class="text-lg text-white/80">
+          &copy; 2025 Rachmandika. All rights reserved.
         </p>
       </div>
-    </section>
-
-    <section id="about" aria-labelledby="about-title">
-      <h2 id="about-title">Who am I?</h2>
-      <p>
-        I'm a simple guy who born at the end of the 20th century, which I
-        would consider myself lucky to born at this period considering that I
-        can grew at the same time with how internet grows. Growing up I'm
-        always close with internet and pop culture, which really shapes my
-        interest and my view around the pop culture and the internet culture
-        itself. In short, I can describe myself as a "cultured geek". Does it
-        sound cocky? Me too, you're not alone.
-      </p>
-      <img src="image/selfpotrait_bnw2.png" alt="About Me" class="portrait-about-page" />
-    </section>
-
-    <section id="experience" aria-labelledby="experience-title">
-      <h2 id="experience-title">My Experiences... So far.</h2>
-      <p>
-        I'll start with my education, which is quite bland actually as I took
-        <span class="highlight">Communication Science</span> as my major.
-        Which if you currently do the same, trust me, at the end of your study
-        you will raise a question about "why am I study a thing that we can
-        learn it on a Public Relations Short course?". But don't listen to me,
-        Trust yourself.
-      </p>
-      <p>
-        But thankfully life is not determined by what have you study, but it's
-        determined by your "taste". So here's the list of my experiences and
-        what have I done so far:
-      </p>
-      <ul>
-        <li>
-          I started my career from a
-          <span class="highlight">small trucking service startup</span> in
-          Jakarta as the
-          <span class="highlight">Customer Service Specialist</span> who
-          managed the client's booking for the trucking and also to manage the
-          "supply and demand" of the service based on our truck availability.
-          I stayed here for around 2 years.
-        </li>
-        <li>
-          My previous experiences might not yet touch anything about internet
-          and technology, but those previous 2 years helped me a lot to learn
-          much about the communication technique and strategy, in which it
-          lands me to my next path of the career which I'm still currently on
-          right now. From the last 2 years I join the
-          <span class="highlight">Global Web Hosting Company</span>
-          who has all around the worlds users, I joined as the
-          <span class="highlight"> Customer Technical Specialist</span> who my
-          daily task mainly to help and troubleshoots client's daily issue
-          with their hosting; from Domain management, Website Deployment and
-          migration issue, up to talk about the billings and renewals plan of
-          their hosting.
-        </li>
-      </ul>
-      <img src="image/background_about2.png" alt="Rachmandika Portrait 2" />
-    </section>
-
-    <section id="projects" aria-labelledby="projects-title">
-      <h2 id="projects-title">Projects</h2>
-      <article>
-        <img src="image/placeholder-image-square.jpg" alt="Project 1 Screenshot" />
-        <h3>Still</h3>
-        <p>Whatever it is</p>
-      </article>
-      <article>
-        <img src="image/placeholder-image-square.jpg" alt="Project 2 Screenshot" />
-        <h3>On</h3>
-        <p>Maybe something good</p>
-      </article>
-      <article>
-        <img src="image/placeholder-image-square.jpg" alt="Project 3 Screenshot" />
-        <h3>progress</h3>
-        <p>I hope so</p>
-      </article>
-    </section>
-
-    <section id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Contact Me</h2>
-      <div id="notification" class="notification"></div>
-      <form class="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required /><br />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required /><br />
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea><br />
-        <button type="submit">Send</button>
-      </form>
-      <img src="image/background_about1.png" alt="Rachmandika Portrait 3" class="contact-img" />
-      <div class="social-icons">
-        <a href="https://www.instagram.com/rachmandikaa/" target="_blank" rel="noopener noreferrer">
-          <img src="image/instagram.png" alt="Instagram Icon" class="social-icon-instagram" />
-        </a>
-        <a href="https://www.linkedin.com/in/rachmandikaadiguna/" target="_blank" rel="noopener noreferrer">
-          <img src="image/linkedin.png" alt="LinkedIn Icon" class="social-icon-linkedin" />
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>&copy; 2025 Rachmandika. All rights reserved.</p>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
