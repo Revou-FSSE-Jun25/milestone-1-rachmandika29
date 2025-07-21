@@ -23,6 +23,17 @@ A modern, responsive portfolio website showcasing Rachmandika's professional jou
 
 ## Styling Features
 
+### Tailwind CSS Implementation
+- **Utility-First Approach:** Rapid UI development with pre-built utility classes
+- **Responsive Design:** Built-in breakpoint system (sm, md, lg, xl)
+- **Custom Styling:**
+  - Semi-transparent backgrounds with backdrop blur
+  - Responsive padding and margins
+  - Flexible grid layouts
+  - Hover and transition effects
+- **Dark Mode:** Built-in dark background with light text
+- **Performance:** Optimized CSS bundle with only used utilities
+
 ### Fonts
 - **Bebas Neue:** Used for headers and navigation
 - **Lato:** Used for body text and form elements
@@ -45,7 +56,7 @@ A modern, responsive portfolio website showcasing Rachmandika's professional jou
 
 ### Frontend
 - HTML5
-- CSS3 (Custom styling, Flexbox layouts)
+- Tailwind CSS (Utility-first CSS framework)
 - JavaScript (ES6+)
 
 ### Libraries & APIs
