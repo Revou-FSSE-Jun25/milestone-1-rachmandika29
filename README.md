@@ -85,11 +85,14 @@ A modern, responsive portfolio website showcasing Rachmandika's professional jou
 ## Development Setup
 
 1. Clone the repository
-2. Configure EmailJS:
+2. Creating the index.html with it's basic structure
+3. Create the style from style.css (already deprecated)
+4. Due to the knowledge gap, this project is using AI to translating the Vanilla CSS from style.css to classes in HTML
+5. Creating script.js for some server side functionality
+6. Configure EmailJS in script.js:
    - Sign up at [EmailJS](https://www.emailjs.com)
    - Create email template
    - Update `script.js` with your EmailJS credentials
-3. Open `index.html` in a browser
 
 # Assignment Due Date
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/akoVEwkh)
