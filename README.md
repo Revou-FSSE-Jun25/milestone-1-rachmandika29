@@ -79,8 +79,8 @@ A modern, responsive portfolio website showcasing Rachmandika's professional jou
 
 ## Deployment
 
-- Hosted on [Vercel](https://vercel.com)
-- Custom domain: [dika.dikadikadika.com](https://dika.dikadikadika.com)
+- Hosted on [Hostinger](https://hostinger.com)
+- Custom domain: [dikadikadika.com](https://dikadikadika.com)
 
 ## Development Setup
 
