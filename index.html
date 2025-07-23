@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth bg-[#000000] text-[#ffffff]">
+<html lang="en" class="scroll-smooth dark">
   <head>
     <!--Meta Tags-->
     <meta charset="UTF-8" />
@@ -36,34 +36,66 @@
     <!--TailwindCSS-->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
+  <body class="bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
     <header
       id="header"
-      class="fixed top-0 left-0 right-0 px-4 xs:px-6 bg-black/80 backdrop-blur-sm z-50"
+      class="fixed top-0 left-0 right-0 px-4 xs:px-6 bg-white/80 dark:bg-black/80 backdrop-blur-sm z-50 transition-colors duration-300"
     >
       <nav
-        class="navbar container mx-auto max-w-7xl relative flex justify-end items-start py-4 mr-[0px]"
+        class="navbar container mx-auto max-w-7xl relative flex justify-between items-center py-4"
       >
+        <!-- Theme Toggle Button -->
+        <button
+          id="theme-toggle"
+          class="theme-toggle-btn flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
+          aria-label="Toggle theme"
+        >
+          <!-- Sun Icon (Shows in Light Mode - Click to go Dark) -->
+          <svg
+            class="sun-icon w-6 h-6 text-yellow-500 block dark:hidden transition-all duration-300"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <!-- Moon Icon (Shows in Dark Mode - Click to go Light) -->
+          <svg
+            class="moon-icon w-6 h-6 text-gray-300 hidden dark:block transition-all duration-300"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+            ></path>
+          </svg>
+        </button>
+
         <div
           class="hamburger md:hidden flex flex-col justify-center items-center gap-1.5 cursor-pointer z-[1001] p-4 absolute right-4 top-4 w-12 h-12"
         >
           <span
-            class="hamburger-line w-6 h-0.5 bg-white rounded-full transition-all duration-300 origin-center"
+            class="hamburger-line w-6 h-0.5 bg-black dark:bg-white rounded-full transition-all duration-300 origin-center"
           ></span>
           <span
-            class="hamburger-line w-6 h-0.5 bg-white rounded-full transition-all duration-300 origin-center"
+            class="hamburger-line w-6 h-0.5 bg-black dark:bg-white rounded-full transition-all duration-300 origin-center"
           ></span>
           <span
-            class="hamburger-line w-6 h-0.5 bg-white rounded-full transition-all duration-300 origin-center"
+            class="hamburger-line w-6 h-0.5 bg-black dark:bg-white rounded-full transition-all duration-300 origin-center"
           ></span>
         </div>
         <ul
-          class="nav-links fixed md:relative top-0 -right-full md:right-0 h-screen md:h-auto w-full xs:w-[70%] md:w-auto bg-black/95 md:bg-transparent flex flex-col md:flex-row justify-center md:justify-end items-center transition-[right] duration-300 ease-in-out gap-6 xs:gap-8 z-[1000] md:px-4"
+          class="nav-links fixed md:relative top-0 -right-full md:right-0 h-screen md:h-auto w-full xs:w-[70%] md:w-auto bg-white/95 dark:bg-black/95 md:bg-transparent flex flex-col md:flex-row justify-center md:justify-end items-center transition-[right] duration-300 ease-in-out gap-6 xs:gap-8 z-[1000] md:px-4"
         >
           <li>
             <a
               href="#home"
-              class="text-white no-underline font-['Bebas_Neue'] text-3xl xs:text-4xl md:text-4xl
+              class="text-black dark:text-white no-underline font-['Bebas_Neue'] text-3xl xs:text-4xl md:text-4xl
               tracking-wider hover:text-[#ff9800] transition-colors duration-200"
               >Home</a
             >
@@ -71,7 +103,7 @@
           <li>
             <a
               href="#about"
-              class="text-white no-underline font-['Bebas_Neue'] text-3xl xs:text-4xl md:text-4xl
+              class="text-black dark:text-white no-underline font-['Bebas_Neue'] text-3xl xs:text-4xl md:text-4xl
               tracking-wider hover:text-[#ff9800] transition-colors duration-200"
               >About</a
             >
@@ -79,7 +111,7 @@
           <li>
             <a
               href="#experience"
-              class="text-white no-underline font-['Bebas_Neue'] text-3xl xs:text-4xl md:text-4xl
+              class="text-black dark:text-white no-underline font-['Bebas_Neue'] text-3xl xs:text-4xl md:text-4xl
               tracking-wider hover:text-[#ff9800] transition-colors duration-200"
               >Experience</a
             >
@@ -87,7 +119,7 @@
           <li>
             <a
               href="#projects"
-              class="text-white no-underline font-['Bebas_Neue'] text-3xl xs:text-4xl md:text-4xl
+              class="text-black dark:text-white no-underline font-['Bebas_Neue'] text-3xl xs:text-4xl md:text-4xl
               tracking-wider hover:text-[#ff9800] transition-colors duration-200"
               >Projects</a
             >
@@ -95,7 +127,7 @@
           <li>
             <a
               href="#contact"
-              class="text-white no-underline font-['Bebas_Neue'] text-3xl xs:text-4xl md:text-4xl
+              class="text-black dark:text-white no-underline font-['Bebas_Neue'] text-3xl xs:text-4xl md:text-4xl
               tracking-wider hover:text-[#ff9800] transition-colors duration-200"
               >Contact</a
             >
@@ -108,13 +140,13 @@
       <section
         id="home"
         aria-labelledby="main-title"
-        class="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-[url(image/portraitpageinverse.png)]"
+        class="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-[url(image/portraitpageinverse.png)] dark:bg-[url(image/portraitpageinverse.png)]"
       >
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
-        <div class="relative z-10 max-w-4xl mx-auto text-center text-black">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white dark:to-black"></div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
           <h1
             id="main-title"
-            class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 text-white font-['Bebas_Neue'] tracking-wider drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]
+            class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 text-black dark:text-white font-['Bebas_Neue'] tracking-wider drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]
             filter drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
           >
             Hello, My name is
@@ -124,7 +156,7 @@
             >
           </h1>
           <p
-            class="text-lg sm:text-xl text-white leading-relaxed font-['Lato'] font-light tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]"
+            class="text-lg sm:text-xl text-black dark:text-white leading-relaxed font-['Lato'] font-light tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]"
           >
             In this very simple web pages I'm gonna introduce myself in a very
             brief manner so you can have a glimpse of idea of who am I, what's
@@ -147,7 +179,7 @@
           >
             Who am I?
           </h2>
-          <p class="text-lg sm:text-xl leading-relaxed font-['Lato'] font-light">
+          <p class="text-lg sm:text-xl leading-relaxed font-['Lato'] font-light text-black dark:text-white">
             I'm a simple guy who born at the end of the 20th century, which I
             would consider myself lucky to born at this period considering that
             I can grew at the same time with how internet grows. Growing up I'm
@@ -179,7 +211,7 @@
             My Experiences... So far.
           </h2>
           <div
-            class="space-y-4 md:space-y-6 text-base sm:text-lg md:text-xl leading-relaxed font-['Lato'] font-light"
+            class="space-y-4 md:space-y-6 text-base sm:text-lg md:text-xl leading-relaxed font-['Lato'] font-light text-black dark:text-white"
           >
             <p>
               I'll start with my education, which is quite bland actually as I
@@ -198,7 +230,7 @@
               experiences and what have I done so far:
             </p>
             <ul class="space-y-6 list-none">
-              <li class="bg-black/20 backdrop-blur-sm p-6 rounded-lg">
+              <li class="bg-gray-100 dark:bg-black/20 backdrop-blur-sm p-6 rounded-lg transition-colors duration-300">
                 I started my career from a
                 <span class="highlight text-[#ff9800]"
                   >small trucking service startup</span
@@ -211,7 +243,7 @@
                 manage the "supply and demand" of the service based on our truck
                 availability. I stayed here for around 2 years.
               </li>
-              <li class="bg-black/20 backdrop-blur-sm p-6 rounded-lg">
+              <li class="bg-gray-100 dark:bg-black/20 backdrop-blur-sm p-6 rounded-lg transition-colors duration-300">
                 My previous experiences might not yet touch anything about
                 internet and technology, but those previous 2 years helped me a
                 lot to learn much about the communication technique and
@@ -256,7 +288,7 @@
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <article
-              class="bg-black/20 backdrop-blur-sm p-6 rounded-lg overflow-hidden"
+              class="bg-gray-100 dark:bg-black/20 backdrop-blur-sm p-6 rounded-lg overflow-hidden transition-colors duration-300"
             >
               <div class="overflow-hidden rounded-lg mb-4">
                 <img
@@ -266,10 +298,10 @@
                 />
               </div>
               <h3 class="text-2xl font-bold text-[#ff9800] mb-2 font-['Bebas_Neue'] tracking-wider">Still</h3>
-              <p class="text-lg text-white font-['Lato'] font-light">Whatever it is</p>
+              <p class="text-lg text-black dark:text-white font-['Lato'] font-light">Whatever it is</p>
             </article>
             <article
-              class="bg-black/20 backdrop-blur-sm p-6 rounded-lg overflow-hidden"
+              class="bg-gray-100 dark:bg-black/20 backdrop-blur-sm p-6 rounded-lg overflow-hidden transition-colors duration-300"
             >
               <div class="overflow-hidden rounded-lg mb-4">
                 <img
@@ -279,10 +311,10 @@
                 />
               </div>
               <h3 class="text-2xl font-bold text-[#ff9800] mb-2 font-['Bebas_Neue'] tracking-wider">On</h3>
-              <p class="text-lg text-white font-['Lato'] font-light">Maybe something good</p>
+              <p class="text-lg text-black dark:text-white font-['Lato'] font-light">Maybe something good</p>
             </article>
             <article
-              class="bg-black/20 backdrop-blur-sm p-6 rounded-lg overflow-hidden"
+              class="bg-gray-100 dark:bg-black/20 backdrop-blur-sm p-6 rounded-lg overflow-hidden transition-colors duration-300"
             >
               <div class="overflow-hidden rounded-lg mb-4">
                 <img
@@ -292,7 +324,7 @@
                 />
               </div>
               <h3 class="text-2xl font-bold text-[#ff9800] mb-2 font-['Bebas_Neue'] tracking-wider">Progress</h3>
-              <p class="text-lg text-white font-['Lato'] font-light">I hope so</p>
+              <p class="text-lg text-black dark:text-white font-['Lato'] font-light">I hope so</p>
             </article>
           </div>
         </div>
@@ -316,29 +348,29 @@
           ></div>
           <form class="contact-form space-y-6">
             <div class="flex flex-col gap-2">
-              <label for="name" class="text-lg font-semibold font-['Lato']">Name:</label>
+              <label for="name" class="text-lg font-semibold font-['Lato'] text-black dark:text-white">Name:</label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 required
-                class="p-3 rounded-lg bg-black/20 backdrop-blur-sm border border-[#ff9800] focus:outline-none focus:ring-2
-                focus:ring-[#ff9800] text-white"
+                class="p-3 rounded-lg bg-gray-100 dark:bg-black/20 backdrop-blur-sm border border-[#ff9800] focus:outline-none focus:ring-2
+                focus:ring-[#ff9800] text-black dark:text-white transition-colors duration-300"
               />
             </div>
             <div class="flex flex-col gap-2">
-              <label for="email" class="text-lg font-semibold font-['Lato']">Email:</label>
+              <label for="email" class="text-lg font-semibold font-['Lato'] text-black dark:text-white">Email:</label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 required
-                class="p-3 rounded-lg bg-black/20 backdrop-blur-sm border border-[#ff9800] focus:outline-none focus:ring-2
-                focus:ring-[#ff9800] text-white"
+                class="p-3 rounded-lg bg-gray-100 dark:bg-black/20 backdrop-blur-sm border border-[#ff9800] focus:outline-none focus:ring-2
+                focus:ring-[#ff9800] text-black dark:text-white transition-colors duration-300"
               />
             </div>
             <div class="flex flex-col gap-2">
-              <label for="message" class="text-lg font-semibold font-['Lato']"
+              <label for="message" class="text-lg font-semibold font-['Lato'] text-black dark:text-white"
                 >Message:</label
               >
               <textarea
@@ -346,8 +378,8 @@
                 name="message"
                 required
                 rows="5"
-                class="p-3 rounded-lg bg-black/20 backdrop-blur-sm border border-[#ff9800] focus:outline-none focus:ring-2
-                focus:ring-[#ff9800] text-white resize-none"
+                class="p-3 rounded-lg bg-gray-100 dark:bg-black/20 backdrop-blur-sm border border-[#ff9800] focus:outline-none focus:ring-2
+                focus:ring-[#ff9800] text-black dark:text-white resize-none transition-colors duration-300"
               ></textarea>
             </div>
             <button
@@ -364,24 +396,24 @@
               href="https://www.instagram.com/rachmandikaa/"
               target="_blank"
               rel="noopener noreferrer"
-              class="hover:opacity-80 transition-opacity duration-200 bg-white/10 p-3 rounded-lg backdrop-blur-sm"
+              class="hover:opacity-80 transition-opacity duration-200 bg-gray-200 dark:bg-white/10 p-3 rounded-lg backdrop-blur-sm"
             >
               <img
                 src="image/instagram.png"
                 alt="Instagram Icon"
-                class="w-10 h-10 brightness-0 invert"
+                class="w-10 h-10 brightness-0 dark:brightness-0 dark:invert"
               />
             </a>
             <a
               href="https://www.linkedin.com/in/rachmandikaadiguna/"
               target="_blank"
               rel="noopener noreferrer"
-              class="hover:opacity-80 transition-opacity duration-200 bg-white/10 p-3 rounded-lg backdrop-blur-sm"
+              class="hover:opacity-80 transition-opacity duration-200 bg-gray-200 dark:bg-white/10 p-3 rounded-lg backdrop-blur-sm"
             >
               <img
                 src="image/linkedin.png"
                 alt="LinkedIn Icon"
-                class="w-10 h-10 brightness-0 invert"
+                class="w-10 h-10 brightness-0 dark:brightness-0 dark:invert"
               />
             </a>
           </div>
@@ -390,10 +422,10 @@
     </main>
 
     <footer
-      class="bg-black/80 backdrop-blur-sm py-8 px-4 sm:px-6 lg:px-8 mt-16"
+      class="bg-gray-100 dark:bg-black/80 backdrop-blur-sm py-8 px-4 sm:px-6 lg:px-8 mt-16 transition-colors duration-300"
     >
       <div class="container mx-auto max-w-7xl text-center">
-        <p class="text-lg text-white/80 font-['Lato'] font-light">
+        <p class="text-lg text-black/80 dark:text-white/80 font-['Lato'] font-light">
           &copy; 2025 Rachmandika. All rights reserved.
         </p>
       </div>

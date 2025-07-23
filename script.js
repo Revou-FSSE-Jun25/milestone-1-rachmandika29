@@ -1,3 +1,47 @@
+// Theme Toggle Functionality
+function initializeTheme() {
+    // Check for saved theme preference or default to 'dark'
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Set initial theme: saved preference > system preference > default to dark
+    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+    
+    // Apply theme to document
+    if (initialTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark');
+    }
+    
+    // Save the theme preference
+    localStorage.setItem('theme', initialTheme);
+}
+
+function toggleTheme() {
+    const htmlElement = document.documentElement;
+    const isDark = htmlElement.classList.contains('dark');
+    
+    if (isDark) {
+        // Switch to light mode
+        htmlElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+    } else {
+        // Switch to dark mode
+        htmlElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+    }
+    
+    // Add a subtle animation effect to the toggle button
+    const toggleButton = document.getElementById('theme-toggle');
+    if (toggleButton) {
+        toggleButton.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            toggleButton.style.transform = 'scale(1)';
+        }, 150);
+    }
+}
+
 // Dynamic CSS Injection for Hamburger Animation
 function injectHamburgerStyles() {
     // Check if styles are already injected to avoid duplicates
@@ -50,6 +94,78 @@ function injectHamburgerStyles() {
         .hamburger:hover {
             background-color: rgba(0, 0, 0, 0.2);
         }
+        
+        /* Dark mode hamburger styling */
+        .dark .hamburger {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .dark .hamburger:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Notification styling for both themes */
+        .notification {
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .notification.success {
+            background-color: #10b981;
+            color: white;
+            border: 1px solid #059669;
+        }
+        
+        .notification.error {
+            background-color: #ef4444;
+            color: white;
+            border: 1px solid #dc2626;
+        }
+        
+        .notification.info {
+            background-color: #3b82f6;
+            color: white;
+            border: 1px solid #2563eb;
+        }
+        
+        /* Light mode notification adjustments */
+        .notification.success {
+            background-color: #d1fae5;
+            color: #065f46;
+            border: 1px solid #10b981;
+        }
+        
+        .notification.error {
+            background-color: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #ef4444;
+        }
+        
+        .notification.info {
+            background-color: #dbeafe;
+            color: #1e40af;
+            border: 1px solid #3b82f6;
+        }
+        
+        /* Dark mode notification styling */
+        .dark .notification.success {
+            background-color: #10b981;
+            color: white;
+            border: 1px solid #059669;
+        }
+        
+        .dark .notification.error {
+            background-color: #ef4444;
+            color: white;
+            border: 1px solid #dc2626;
+        }
+        
+        .dark .notification.info {
+            background-color: #3b82f6;
+            color: white;
+            border: 1px solid #2563eb;
+        }
     `;
     
     // Add CSS rules to style element
@@ -78,6 +194,16 @@ function showNotification(message, type) {
 
 // Initialize EmailJS with your public key
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize theme first
+    initializeTheme();
+    
+    // Set up theme toggle button
+    const themeToggleButton = document.getElementById('theme-toggle');
+    if (themeToggleButton) {
+        themeToggleButton.addEventListener('click', toggleTheme);
+    }
+    
+    // Initialize EmailJS
     emailjs.init('OI8UDNNBnIYXpLeXV');
 
 
