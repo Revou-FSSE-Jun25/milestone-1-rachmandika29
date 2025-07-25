@@ -65,7 +65,7 @@ A modern, responsive portfolio website showcasing Rachmandika's professional jou
 
 ## How to Access/Navigate
 
-1. Visit [dikadikadika.com](https://dika.dikadikadika.com)
+1. Visit [dikadikadika.com](https://dikadikadika.com)
 2. Use the navigation bar to move between sections
 3. Contact form available in the Contact section
 
