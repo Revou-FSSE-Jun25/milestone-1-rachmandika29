@@ -25,13 +25,11 @@ A modern, responsive portfolio website showcasing Rachmandika's professional jou
 
 ### Tailwind CSS Implementation
 - **Utility-First Approach:** Rapid UI development with pre-built utility classes
-- **Responsive Design:** Built-in breakpoint system (sm, md, lg, xl)
+- **Responsive Design:** Built-in breakpoint system (sm, md, lg)
 - **Custom Styling:**
-  - Semi-transparent backgrounds with backdrop blur
   - Responsive padding and margins
   - Flexible grid layouts
   - Hover and transition effects
-- **Dark Mode:** Built-in dark background with light text
 - **Performance:** Optimized CSS bundle with only used utilities
 
 ### Fonts
@@ -41,16 +39,10 @@ A modern, responsive portfolio website showcasing Rachmandika's professional jou
 ### Color Scheme
 - Primary: Black (#000)
 - Accent: Orange (#ff9800)
-- Success: Green (#4CAF50)
-- Error: Red (#f44336)
-- Info: Blue (#2196F3)
 
 ### Visual Effects
-- Blur effects on background images
 - Smooth scroll behavior
-- Animated notifications
 - Hover effects on navigation and buttons
-- Box shadows for depth
 
 ## Tech Stack
 
@@ -73,7 +65,7 @@ A modern, responsive portfolio website showcasing Rachmandika's professional jou
 
 ## How to Access/Navigate
 
-1. Visit [dika.dikadikadika.com](https://dika.dikadikadika.com)
+1. Visit [dikadikadika.com](https://dika.dikadikadika.com)
 2. Use the navigation bar to move between sections
 3. Contact form available in the Contact section
 
@@ -86,8 +78,7 @@ A modern, responsive portfolio website showcasing Rachmandika's professional jou
 
 1. Clone the repository
 2. Creating the index.html with it's basic structure
-3. Create the style from style.css (already deprecated)
-4. Due to the knowledge gap, this project is using AI to translating the Vanilla CSS from style.css to classes in HTML
+3. adding CSS classes using Tailwind CSS integration and Syntaxes
 5. Creating script.js for some server side functionality
 6. Configure EmailJS in script.js:
    - Sign up at [EmailJS](https://www.emailjs.com)
